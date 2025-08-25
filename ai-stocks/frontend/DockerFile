@@ -1,0 +1,7 @@
+FROM node:20-alpine
+WORKDIR /app
+COPY package.json ./
+RUN corepack enable && corepack prepare pnpm@9.7.0 --activate && pnpm install
+COPY . .
+ENV NEXT_TELEMETRY_DISABLED=1
+CMD ["pnpm", "dev"]

@@ -1,0 +1,12 @@
+[project]
+name = "workers"
+version = "0.1.0"
+dependencies = [
+  "celery[redis]>=5.4",
+  "httpx>=0.27",
+  "asyncpg>=0.29",
+  "pandas>=2.2",
+  "pandas-ta>=0.3.14b0",
+]
+[tool.uv]
+package = true
